@@ -2,6 +2,7 @@ package com.coderstrust.graduationpack;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -26,7 +27,8 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
 
                 //step 3
-                Toast.makeText(MainActivity.this,"Hello new Graduate",Toast.LENGTH_SHORT).show();
+                Intent graduate = new Intent(MainActivity.this,GraduateActivity.class);
+                startActivity(graduate);
             }
         });
 
