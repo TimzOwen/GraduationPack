@@ -8,14 +8,44 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 public class GraduateActivity extends AppCompatActivity {
+
+    Button btnSubmit;
+    EditText etName, etCourse;
+    TextView tvName, tvCourse;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_graduate);
+
+        btnSubmit = findViewById(R.id.btn_submit);
+        etCourse = findViewById(R.id.et_grad_Course);
+        etName = findViewById(R.id.et_grad_name);
+        tvCourse = findViewById(R.id.tv_course);
+        tvName = findViewById(R.id.tv_name);
+
+        btnSubmit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String name = etName.getText().toString().trim();
+                String course = etCourse.getText().toString().trim();
+
+                tvName.setText(name);
+                tvCourse.setText(course);
+
+
+
+                Toast.makeText(GraduateActivity.this,"Data submitted successfully",Toast.LENGTH_SHORT).show();
+
+            }
+        });
     }
 
     //create the on Options menu created
