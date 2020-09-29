@@ -1,9 +1,68 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".GraduateActivity">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <EditText
+        android:id="@+id/et_grad_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter to search your Name"
+        android:textSize="18sp"
+        android:layout_margin="20sp"
+        android:textStyle="bold"
+        android:inputType="textPersonName"/>
+    <EditText
+        android:id="@+id/et_grad_Course"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Name of you Bsc degree"
+        android:textSize="18sp"
+        android:layout_margin="20sp"
+        android:layout_below="@id/et_grad_name"
+        android:textStyle="bold"
+        android:inputType="textPersonName"/>
+
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/et_grad_Course"
+        android:layout_margin="20sp"
+        android:textSize="20sp"
+        android:text="Submit Your Name"
+        />
+    <TextView
+        android:id="@+id/tv_course"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_name"
+        android:layout_margin="20sp"
+        android:textSize="20sp"
+        android:text="Submit Your Course Name"
+        />
+    <Button
+        android:id="@+id/btn_submit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Submit Data "
+        android:layout_margin="20sp"
+        android:layout_below="@id/tv_course"
+        android:textSize="18sp"/>
+    <ImageView
+        android:src="@drawable/graduation"
+        android:id="@+id/iv_congratulation"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_below="@id/btn_submit"
+        android:layout_margin="20dp"
+        android:layout_height="wrap_content"/>
+
+
+
+
+</RelativeLayout>

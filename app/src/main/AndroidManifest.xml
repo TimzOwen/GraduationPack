@@ -11,7 +11,8 @@
         android:theme="@style/AppTheme">
         <activity android:name=".ListGraduateActivity"
             android:label="Graduate List"></activity>
-        <activity android:name=".GraduateActivity" />
+        <activity android:name=".GraduateActivity"
+            android:label="Graduate Page"/>
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
